@@ -5,9 +5,9 @@ $("#FormSerialize").submit(function(event) {
         url: 'https://api.sheetson.com/v1/sheets/LivingQuality?spreadsheetId=1SK4NJIpVlqIHxY2Jivpf1aDuVdJsiguS1AJiFlDWs4U',
         data: { get_param: 'value' },
         dataType: 'json',
-        success: function(resultado) {
+        success: function(data) {
             //GERA A TABELA
-            GerarTabela(resultado);
+            GerarTabela(data);
         }
     });
 });
@@ -15,7 +15,7 @@ $("#FormSerialize").submit(function(event) {
 
 
 
-function GerarTabela(resultado) {
+function GerarTabela(data) {
     var Cont = 0;
     while (Cont < data.length) {
         var tipo_de_input = data[Cont]["name"];
