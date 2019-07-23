@@ -8,11 +8,21 @@ $(document).ready(function() {
             console.log(json);
             var i = 0;
             while (i < json['results'].length) {
+                // GERA O TITULO
                 var a = json['results'][i]['Texto'];
+                // GERA O IMAGEM
                 var b = json['results'][i]['Titulo'];
+                // GERA O TEXTO
                 var c = json['results'][i]['Imagem'];
 
+                // GERA A TABELA
                 $('gerador').append('<table width="600" cellspacing="0" cellpadding="0" border="0" align="center">' +
+                    // '<tr>' +
+                    // '<td width="40" height="2"></td>' +
+                    // '<td width="100" height="2"><img width="100" height="2" src="http://martinluz.com/clientes/economatica/emkt/20190429-estudo/images/line.png" alt="" style="display:block; border:none; padding:none; margin:none;"></td>' +
+                    // '<td width="100" height="2"><img width="100" height="2" src="http://martinluz.com/clientes/economatica/emkt/20190429-estudo/images/line.png" alt="" style="display:block; border:none; padding:none; margin:none;"></td>' +
+                    // '<td width="100" height="2"><img width="100" height="2" src="http://martinluz.com/clientes/economatica/emkt/20190429-estudo/images/line.png" alt="" style="display:block; border:none; padding:none; margin:none;"></td>' +
+
                     '<tr>' +
                     '<td width="40" height="2"></td>' +
 
@@ -30,6 +40,11 @@ $(document).ready(function() {
                     '</font><br><br>' +
                     '<font style="font-family: Arial, Helvetica, sans-serif, Verdana, Geneva; font-size: 13px; color: #4a4a4a; line-height: 1.69; text-decoration: none; ">' +
                     a + '</font> <br><br>' +
+                    // '<tr>' +
+                    // '<td width="40" height="2"></td>' +
+                    // '<td width="100" height="2"><img width="100" height="2" src="http://martinluz.com/clientes/economatica/emkt/20190429-estudo/images/line.png" alt="" style="display:block; border:none; padding:none; margin:none;"></td>' +
+                    // '<td width="100" height="2"><img width="100" height="2" src="http://martinluz.com/clientes/economatica/emkt/20190429-estudo/images/line.png" alt="" style="display:block; border:none; padding:none; margin:none;"></td>' +
+                    // '<td width="100" height="2"><img width="100" height="2" src="http://martinluz.com/clientes/economatica/emkt/20190429-estudo/images/line.png" alt="" style="display:block; border:none; padding:none; margin:none;"></td>' +
                     '</td>' +
                     '<td width="40"></td>' +
                     '</tr> <table width="600" cellspacing="0" cellpadding="0" border="0" align="center">' +
