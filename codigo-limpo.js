@@ -21,31 +21,25 @@ function GerarTabela(resultado) {
         var tipo_de_input = data[Cont]["name"];
         if (tipo_de_input == 'Titulo') {
 
-            // RENDERIZA O TITULO
             var tabelas = RenderTitutlo(data[Cont]["value"]);
 
         } else if (tipo_de_input == 'Texto') {
 
-            // RENDERIZA O TEXTO
             var tabelas = RenderTexto(data[Cont]["value"].replace(/\n/g, '<br>'));
 
         } else if (tipo_de_input == 'Imagem') {
 
-            // RENDERIZA A IMAGEM
             var tabelas = RenderImagem(data[Cont]["value"]);
 
         } else if (tipo_de_input == 'Link') {
 
-            // RENDERIZA O BOTÃO COM LINK
             var tabelas = RenderLink(data[Cont]["value"]);
 
         } else if (tipo_de_input == 'TFooter') {
 
-            // RENDERIZA O TEXTO DO FOOTER
             var tabelas = TextFooter(data[Cont]["value"]);
         }
 
-        // INSERE AS TABELAS NA DIV GERADOR
         $('gerador').append(tabelas);
 
         Cont++;
